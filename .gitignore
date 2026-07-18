@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+*.jonlib
+database/*.db
+data/ai_merchant_cache.json
+.env
