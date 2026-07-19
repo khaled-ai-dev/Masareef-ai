@@ -30,17 +30,17 @@ A user submits a bank SMS (via a custom Streamlit dashboard), and the system:
 
 ## 🏗️ Architecture
 
-SMS Input (Streamlit)
-↓
-FastAPI Backend
-↓
-Regex Extraction → ML Transaction Classifier → 3-Layer Merchant Categorizer
-↓
-SQLite Database
-↓
-n8n AI Agent (scheduled/triggered)
-↓
-Local LLM Reasoning (Ollama) → Automated Email Report
+```mermaid
+graph TD
+    A[SMS Input - Streamlit] --> B[FastAPI Backend]
+    B --> C[Regex Extraction]
+    C --> D[ML Transaction Classifier]
+    D --> E[3-Layer Merchant Categorizer]
+    E --> F[SQLite Database]
+    F --> G[n8n AI Agent]
+    G --> H[Local LLM Reasoning - Ollama]
+    H --> I[Automated Email Report]
+```
 
 ---
 
